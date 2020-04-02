@@ -1,0 +1,13 @@
+<div class="user-details-wrapper">
+  <h2>User Details</h2>
+
+  <ums-user-details-form *ngIf="user$ | async as user"
+    [user]="user" 
+    (saveUser)="onSaveUserInformation($event)"
+    (addUser)="onAddUser($event)">
+
+    <button *ngIf="user.id" type="button" mat-stroked-button color="accent" (click)="onDeleteUser()">
+      Delete
+    </button>
+  </ums-user-details-form>
+</div>

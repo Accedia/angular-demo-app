@@ -1,0 +1,11 @@
+.home-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+button {
+  display: block;
+  margin: 15px auto;
+  width: 20%;
+}

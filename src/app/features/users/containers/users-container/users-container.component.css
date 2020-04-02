@@ -1,0 +1,35 @@
+.users-list-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+.header-item {
+  height: fit-content;
+  margin-bottom: 1em;
+}
+
+.header-label {
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.header-label.name {
+  width: 50%;
+}
+
+.header-label.avatar {
+  width: 60px;
+}
+
+.header-label.email {
+  width: 30%;
+}
+
+@media screen and (max-width: 1300px) {
+  .header-label.email {
+    width: 24%;
+  }
+}

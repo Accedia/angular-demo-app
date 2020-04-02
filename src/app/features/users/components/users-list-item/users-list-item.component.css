@@ -1,0 +1,36 @@
+.list-item {
+  height: fit-content;
+  margin-bottom: 1em;
+}
+
+.user-email {
+  width: 30%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.user-name {
+  width: 50%;
+  text-align: center;
+  font-size: 18pt;
+}
+
+.user-avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.action-buttons-container {
+  margin-left: 2em;
+  text-align: center;
+  display: flex;
+}
+
+.action-buttons-container button {
+  margin: 0.5em;
+}

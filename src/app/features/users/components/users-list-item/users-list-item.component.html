@@ -1,0 +1,11 @@
+<mat-list-item class="list-item" role="listitem">
+  <span class="user-avatar" [umsBackgroundImage]="user.avatar"></span> 
+  <span class="user-name"> {{ user.name }} </span> 
+  <span class="user-email"> {{ user.email }}</span>
+  
+  <div class="action-buttons-container">
+    <button mat-stroked-button [routerLink]="['/users', user.id]">
+      View User
+    </button>
+  </div>
+</mat-list-item>

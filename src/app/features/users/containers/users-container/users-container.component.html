@@ -1,0 +1,25 @@
+<div class="users-list-wrapper">
+  <h2>Users</h2>
+  
+  <ums-users-search (search)="onSearch($event)"></ums-users-search>
+
+  <mat-list matSort (matSortChange)="onSortData($event)" role="list">
+    <mat-list-item class="header-item" role="listitem">
+      <span class="header-label avatar">Image</span> 
+      <span  mat-sort-header="name" class="header-label name">Name</span> 
+      <span  mat-sort-header="email" class="header-label email">Email</span>
+    </mat-list-item>
+    
+    <ums-users-list-item *ngFor="let user of users$ | async | filter:searchText:searchCriteria" [user]="user">
+    </ums-users-list-item>
+  </mat-list>
+
+  <mat-paginator 
+    [pageIndex]="pageIndex" 
+    [pageSize]="usersPerPage$ | async" 
+    [length]="totalUsers$ | async" 
+    (page)="onPagination($event)">
+  </mat-paginator>
+  
+  <button mat-raised-button color="primary" routerLink="/users/add">Add User</button>
+</div>

@@ -1,0 +1,17 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.search-actions {
+  width: 50%;
+}
+
+.search-options {
+  width: 60%;
+}
+
+.search-options-button {
+  margin-left: 10px;
+}

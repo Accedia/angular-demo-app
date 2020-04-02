@@ -1,0 +1,39 @@
+.user-avatar {
+  height: 7em;
+  width: 7em;
+  border-radius: 50%;
+  display: inline-block;
+  background-size: contain;
+  margin-top: 1em;
+}
+
+.user-details-form {
+  display: grid;
+  margin-top: 2em;
+}
+
+.user-details-form-field {
+  width: 30%;
+  margin: 0 auto;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.updated-at {
+  margin-top: 1em;
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: right;
+}
+
+.action-buttons-container { 
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 1.5em;
+}
+
+.action-buttons-container button,
+.action-buttons-container::ng-deep button { 
+  width: 40%;
+  margin-right: 5%;
+}

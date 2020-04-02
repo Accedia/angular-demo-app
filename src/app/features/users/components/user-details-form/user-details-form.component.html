@@ -1,0 +1,39 @@
+<div *ngIf="updatedAt" class="updated-at">
+  User Updated At: {{ updatedAt | date:'medium' }}
+</div>
+
+<div>
+  <span class="user-avatar" [umsBackgroundImage]="user.avatar">
+  </span>
+</div>
+
+<form class="user-details-form" (ngSubmit)="onEditUser()" [formGroup]="userDetailsForm">
+  <mat-form-field *ngIf="user.id" class="user-details-form-field">
+    <mat-label>ID</mat-label>
+    <input matInput formControlName="id">
+  </mat-form-field>
+  <mat-form-field class="user-details-form-field">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+    <mat-error *ngIf="userDetailsForm.controls.name.hasError('required')">Name is required</mat-error>
+  </mat-form-field>
+  <mat-form-field class="user-details-form-field">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+    <mat-error *ngIf="userDetailsForm.controls.email.hasError('required')">Email is required</mat-error>
+    <mat-error *ngIf="userDetailsForm.controls.email.hasError('pattern')">Email is not valid</mat-error>
+  </mat-form-field>
+  <mat-form-field class="user-details-form-field">
+    <mat-label>Job</mat-label>
+    <input matInput formControlName="job">
+    <mat-error *ngIf="userDetailsForm.controls.job.hasError('required')">Job is required</mat-error>
+  </mat-form-field>
+
+  <div class="action-buttons-container">
+    <button type="submit" mat-stroked-button color="primary">
+      {{ user.id ? (isInEditMode ? 'Save' : 'Edit') : 'Add' }}
+    </button>
+
+    <ng-content></ng-content>
+  </div>
+</form>

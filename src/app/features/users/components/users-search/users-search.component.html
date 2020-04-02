@@ -1,0 +1,15 @@
+<div class="search-container">
+  <div class="search-options">
+    <span class="search-options-label">Search by:</span>
+    <mat-radio-group [value]="'name'" (change)="onSearchCriteriaChange($event)">
+      <mat-radio-button class="search-options-button" value="name">Name</mat-radio-button>
+      <mat-radio-button class="search-options-button" value="email">Email</mat-radio-button>
+    </mat-radio-group> 
+  </div>
+  
+  <div class="search-actions">
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Type to search" (keyup)="onSearchTextChange($event)">
+    </mat-form-field>
+  </div>
+</div>

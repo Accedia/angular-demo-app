@@ -1,0 +1,18 @@
+<form class="form" (ngSubmit)="onSubmit()" [formGroup]="authForm">
+  <mat-form-field class="full-width">
+    <mat-label>Email *</mat-label>
+    <input matInput formControlName="email" type="email">
+    <mat-icon matSuffix>email</mat-icon>
+    <mat-error *ngIf="authForm.controls.email.hasError('required')">Email is required</mat-error>
+    <mat-error *ngIf="authForm.controls.email.hasError('pattern')">Email is not valid</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="full-width">
+    <mat-label>Password *</mat-label>
+    <input matInput formControlName="password" type="password">
+    <mat-icon matSuffix>lock</mat-icon>
+    <mat-error *ngIf="authForm.controls.password.hasError('required')">Password is required</mat-error>
+    <mat-error *ngIf="authForm.controls.password.hasError('minlength')">Password must be at least 6 characters long</mat-error>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
